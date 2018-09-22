@@ -1,7 +1,7 @@
-
-
 #!/bin/bash
 IFS=''
+
+ls $target > files.txt;
 
 if [[ $1 == "" ]]; then
 	echo -e "\033[91mYou need to specify path\033[0m";
@@ -15,8 +15,6 @@ fi;
 
 target=$1;
 newName=$2;
-
-ls $target > files.txt;
 
 i=0
 while read -r line; do
